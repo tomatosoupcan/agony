@@ -1,0 +1,38 @@
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pangolin">
+<link rel='stylesheet' href='index.css'>
+<script src='index.js'></script>
+</head>
+
+<meta name="viewport" 
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta charset="UTF-8">
+  
+<table>
+  <tr>
+    <td id='t1' onclick='tdclick("t1");'><div class='con'><center><div class='header'>Agony Uncle</div><br class='hide'><div class='emoji' id='uncle'>👴</div></center></div></td>
+    <td id='t2' onclick='tdclick("t2");'><div class='con'><center><div class='header'>Queen of Clubs</div><div class='icon'>♣️</div></center></div></td>
+    <td id='t3' onclick='tdclick("t3");'><div class='con'><center><div class='header'>Last Trick</div><div class='icon'>Ω</div></center></div></td>
+  <tr>
+    <td id='t4' onclick='tdclick("t4");'><div class='con'><center><div class='header'>Queen of Diamonds</div><div class='icon'><font color = 'red'>♦️</font></div></center></div></td>
+    <td id='t5' onclick='tdclick("t5");'><div class='con'><center><div class='header'>Agony Aunt</div><br class='hide'><div class='emoji' id='aunt'>👵</div></center></div></td>
+    <td id='t6' onclick='tdclick("t6");'><div class='con'><center><div class='header'>Queen of Hearts</div><div class='icon'><font color='red'>♥️</font></div></center></div></td>
+  <tr>
+    <td id='t7' onclick='tdclick("t7");'><div class='con'><center><div class='header'>Most Tricks</div><div class='icon'>></d></center></div></td>
+    <td id='t8' onclick='tdclick("t8");'><div class='con'><center><div class='header'>Queen of Spades</div><div class='icon'>♠️</dnv></center></div></td>
+    <td id='t9' onclick='tdclick("t9");'><div class='con'><center><div class='header'>Dumpth Trick</div><div class='icon' id='dumpth'>#</div></center></div></td>
+</table>
+<div class='scores'>
+<br>
+<button onclick='clearBoard();'>Clear Board</button>
+&nbsp;&nbsp;&nbsp;
+<button onclick='makeDump();'>Randomize Dump Card</button>
+<br><br>
+Blue Player:&nbsp;&nbsp;&nbsp; <input type="number" class="score" id="blueScore" min="0" max="17" value=17>&nbsp;&nbsp; <button onclick='noTrick("blue")'>All/No Tricks</button>&nbsp;&nbsp; <button onclick='noPenalty("blue")'>No Penalties</button><br><br>
+  
+Red Player:&nbsp;&nbsp;&nbsp;&nbsp; <input type="number" class="score" id="redScore" min="0" max="17" value=17>&nbsp;&nbsp; <button onclick='noTrick("red")'>All/No Tricks</button>&nbsp;&nbsp; <button onclick='noPenalty("red")'>No Penalties</button><br><br>
+  
+Green Player:&nbsp; <input type="number" id="greenScore" class="score" min="0" max="17" value=17>&nbsp;&nbsp; <button onclick='noTrick("green")'>All/No Tricks</button>&nbsp;&nbsp; <button onclick='noPenalty("green")'>No Penalties</button><br><br>
+  
+Purple Player: <input type="number" id="purpleScore" class="score" min="0" max="17" value=17>&nbsp;&nbsp; <button onclick='noTrick("purple")'>All/No Tricks</button>&nbsp;&nbsp; <button onclick='noPenalty("purple")'>No Penalties</button><br><br>
+</div>

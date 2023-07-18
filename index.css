@@ -1,0 +1,81 @@
+.scores{
+  transform-origin:0 0;
+  scale: 1;
+}
+
+.score{
+	max-width:75px;
+}
+
+.icon {
+  font-size: 24vw;
+  font-weight: bold;
+  font-family: "Times New Roman";
+  -webkit-user-select: none;  
+  -moz-user-select: none;    
+  -ms-user-select: none;      
+  user-select: none;
+}
+
+.icons {
+  font-size: 16vw;
+  font-weight: bold;
+  font-family: "Times New Roman";
+  -webkit-user-select: none;  
+  -moz-user-select: none;    
+  -ms-user-select: none;      
+  user-select: none;
+}
+
+.emoji {
+  font-size: 20vw;
+  -webkit-user-select: none;  
+  -moz-user-select: none;    
+  -ms-user-select: none;      
+  user-select: none;
+}
+
+.emojiSmall {
+  font-size: 14vw;
+  -webkit-user-select: none;  
+  -moz-user-select: none;    
+  -ms-user-select: none;      
+  user-select: none;
+}
+
+.header {
+  font-size: 4vw;
+  font-weight: bold;
+  font-family: "Pangolin";
+  -webkit-user-select: none;  
+  -moz-user-select: none;    
+  -ms-user-select: none;      
+  user-select: none;
+}
+
+table, th, td {
+  border: 1px solid;
+}
+table {
+  width: 100%;
+}
+
+td {
+  width: 33.33%;
+  position: relative;
+}
+td .con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (orientation: landscape) {
+    table { width: 25%; }
+	td { width: 8.3325%; }
+	.icon { font-size: 6vw; }
+	.icons { font-size: 4vw; }
+	.emoji { font-size: 5vw; }
+	.emojiSmall { font-size: 3.5vw; }
+	.header { font-size: 1vw; }
+}
