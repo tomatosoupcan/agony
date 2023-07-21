@@ -1,3 +1,4 @@
+trickNum = 1;
 function badlyCheckLines(color) {
   t1 = document.getElementById('t1').style.backgroundColor;
   t2 = document.getElementById('t2').style.backgroundColor;
@@ -34,6 +35,8 @@ function noPenalty(color) {
 }
 
 function clearBoard() {
+  trickNum = 1;
+  document.getElementById('trickCount').textContent = 'Trick Number: 1';
   document.getElementById('blueScore').value = eval(document.getElementById('blueScore').value) - eval(badlyCheckLines("lightblue"))
   document.getElementById('redScore').value = eval(document.getElementById('redScore').value) - eval(badlyCheckLines("pink"))
   document.getElementById('greenScore').value = eval(document.getElementById('greenScore').value) - eval(badlyCheckLines("lightgreen"))
@@ -120,4 +123,9 @@ function makeDump() {
 	document.getElementById('uncle').className = 'emojiSmall';
 	document.getElementById('aunt').className = 'emojiSmall';
 	document.getElementById('dumpth').className = 'icons';
+}
+
+function advanceTrick() {
+	trickNum = trickNum + 1;
+	document.getElementById('trickCount').textContent = 'Trick Number: ' + trickNum;
 }
