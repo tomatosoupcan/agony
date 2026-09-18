@@ -1,4 +1,5 @@
 trickNum = 1;
+dumpthValue = 0;
 function badlyCheckLines(color) {
   t1 = document.getElementById('t1').style.backgroundColor;
   t2 = document.getElementById('t2').style.backgroundColor;
@@ -38,6 +39,10 @@ function adjustScore(color, delta) {
   const field = document.getElementById(color + 'Score');
   const nextValue = Number(field.value) + delta;
   field.value = Math.min(17, Math.max(0, nextValue));
+}
+
+function updateDumpthGlow() {
+  document.getElementById('t9').classList.toggle('glow', trickNum === dumpthValue);
 }
 
 function clearBoard() {
@@ -124,15 +129,18 @@ function makeDump() {
 	}
 	
 	suitrank = rankn+suit;
+	dumpthValue = rankn;
 	document.getElementById('dumpth').textContent = '#' + rankn;
 	document.getElementById('uncle').innerHTML = rank + suit;
-	document.getElementById('aunt').innerHTML = 'Q' + suit;	
+	document.getElementById('aunt').innerHTML = 'Q' + suit;
 	document.getElementById('uncle').className = 'emojiSmall';
 	document.getElementById('aunt').className = 'emojiSmall';
 	document.getElementById('dumpth').className = 'icons';
+	updateDumpthGlow();
 }
 
 function advanceTrick() {
 	trickNum = trickNum + 1;
 	document.getElementById('trickCount').textContent = 'Trick Number: ' + trickNum;
+	updateDumpthGlow();
 }
