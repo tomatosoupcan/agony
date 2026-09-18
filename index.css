@@ -73,8 +73,8 @@ body {
 }
 
 .player-row {
-  display: grid;
-  grid-template-columns: minmax(120px, 140px) auto minmax(72px, 90px) auto minmax(120px, 1fr) minmax(120px, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 0.6rem;
   padding: 0.5rem 0.6rem;
@@ -84,8 +84,13 @@ body {
 }
 
 .player-row label {
+  flex: 1 1 100px;
   font-weight: 700;
   color: var(--text);
+}
+
+.player-row button:not(.score-adjust) {
+  flex: 1 1 120px;
 }
 
 .score {
@@ -149,7 +154,7 @@ body {
 table {
   width: auto;
   max-width: 100%;
-  max-height: calc(100vh - 2rem);
+  max-height: calc(100vh - 7rem);
   margin: 0 auto;
   border-collapse: separate;
   border-spacing: 0.5rem;
