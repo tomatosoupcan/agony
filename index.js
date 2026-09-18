@@ -34,6 +34,12 @@ function noPenalty(color) {
   document.getElementById(color+'Score').value = eval(document.getElementById(color+'Score').value) + eval(buff);
 }
 
+function adjustScore(color, delta) {
+  const field = document.getElementById(color + 'Score');
+  const nextValue = Number(field.value) + delta;
+  field.value = Math.min(17, Math.max(0, nextValue));
+}
+
 function clearBoard() {
   trickNum = 1;
   document.getElementById('trickCount').textContent = 'Trick Number: 1';
@@ -53,6 +59,7 @@ function clearBoard() {
     }
     document.getElementById(id).style.backgroundColor = '';
   }
+  makeDump();
 }
 
 function tdclick(id) {
